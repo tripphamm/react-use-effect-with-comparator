@@ -23,7 +23,7 @@ const ShoppingCart = props => {
       fetchPrices(items).then(setTotalPrice);
     },
     [items, setTotalPrice],
-    // custom comparison function - use at your own risk!
+    // custom comparison function
     (prevDeps, currentDeps) => {
       const [prevItems, prevSetTotalPrice] = prevDeps;
       const [currentItems, currentSetTotalPrice] = currentDeps;

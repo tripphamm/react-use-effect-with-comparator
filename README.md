@@ -1,8 +1,10 @@
-# useMemoWithComparator
+# useEffectWithComparator
 
 It's `React.useEffect` except that it takes a custom comparator-function so that you have more control over when it re-runs.
 
 ## Quick start
+
+> Caution: this hook circumvents some of the guardrails that React put in place. Use it only if you're sure about what you're doing.
 
 ```js
 const ShoppingCart = props => {
@@ -47,7 +49,8 @@ e.g.
 ```js
 // triple-equals demonstrates referential equality
 
-// even though these objects are practically the same, they are not strictly the same object
+// even though these objects are practically the same,
+// they are not strictly the same object
 // so these return `false`
 { a: 'apple' } === { a: 'apple' } // false
 [1, 2, 3] === [1, 2, 3] // false

@@ -29,7 +29,7 @@ const ShoppingCart = props => {
       const [currentItems, currentSetTotalPrice] = currentDeps;
 
       return (
-        prevSetTotalPrice === currentSetTotalPrice) &&
+        prevSetTotalPrice === currentSetTotalPrice &&
         prevItems.length === currentItems.length &&
         currentItems.every(item => prevItems.includes(item));
       );
